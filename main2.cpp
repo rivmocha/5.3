@@ -1,19 +1,30 @@
 #include<iostream>
-#include<cstdlib>
-#include<ctime>
+
 using namespace std;
 
 int main()
 {
+    int A[10] = { 0, };
+    
     srand((unsigned int)time(NULL));
-    int Array[10] = { 0, };
+
     for (int i = 0; i < 10; ++i)
     {
-        
-        int num = rand() % 10 + 1;
-        cout << (int)num << endl;
-        
+         A[i] = rand() % 10 + 1;
+         for (int j = 0; j < i; ++j)
+         {
+             while (A[i] == A[j])
+             {
+                 i--;
+                 break;
+             }
+         }     
     }
+    for (int i = 0; i < 10; ++i)
+    {
+        cout << A[i] << endl;
+    }
+
     return 0;
 }
 
