@@ -33,57 +33,6 @@ int main()
     }
  
 
-    //split
-    {
-        for (int i = 0; i < 2; ++i)
-        {
-            SplitCard[i] = A[i];
-        }
-
-
-        for (int i = 0; i < 2; ++i)
-        {
-            int Type = SplitCard[i] / 13;
-            int Number = SplitCard[i] % 13;
-
-            switch (Type)
-            {
-            case 0:
-                cout << "Heart";
-                break;
-            case 1:
-                cout << "Spade";
-                break;
-            case 2:
-                cout << "Club";
-                break;
-            case 3:
-                cout << "Diamond";
-                break;
-            }
-
-            switch (Number)
-            {
-            case 12:
-                cout << "K" << " ";
-                break;
-            case 11:
-                cout << "Q" << " ";
-                break;
-            case 10:
-                cout << "J" << " ";
-                break;
-            case 0:
-                cout << "A" << " ";
-                break;
-            default:
-                cout << Number + 1 << " ";
-                break;
-            }
-        }
-    }
-
-
     //Draw
     int Playercard[3] = { 0, };
     int Dealercard[3] = { 0, };
